@@ -13,15 +13,15 @@ def inject(site)
   end
 end
 
-Jekyll::Hooks.register :pages, :post_render do |page|
-  inject(page)
+Jekyll::Hooks.register :documents, :post_render do |document|
+  inject(document)
 end
 
-Jekyll::Hooks.register :posts, :post_render do |post|
-  inject(post)
-end
+# Jekyll::Hooks.register :posts, :post_render do |post|
+#   inject(post)
+# end
 
-Jekyll::Hooks.register :site, :post_render do |site|
-  #puts site.config
-  #inject(site)
-end
+# Jekyll::Hooks.register :site, :post_render do |site|
+#   #puts site.config
+#   #inject(site)
+# end
